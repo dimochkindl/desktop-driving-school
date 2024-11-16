@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx" stylesheets="@../styles/style.css" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.db.controllers.ScriptLoaderController">
+    <VBox spacing="10" alignment="CENTER" prefWidth="600" prefHeight="450">
+
+        <TextArea fx:id="scriptTextArea" wrapText="true" prefHeight="350" prefWidth="580" editable="false"/>
+
+        <Button fx:id="loadButton" alignment="CENTER" mnemonicParsing="false" text="load"/>
+    </VBox>
+</VBox>

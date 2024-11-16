@@ -1,0 +1,42 @@
+SELECT
+    j.id,
+    j.grade,
+    j.visit,
+    e.name AS employee_name,
+    s.name AS student_name,
+    l.theme as lesson_theme
+FROM
+    journal j
+JOIN
+    employee e ON j.employee_id = e.id
+JOIN
+    student s ON j.student_id = s.id
+join
+    lesson l on j.lesson_id = l.id;
+
+SELECT
+    e.id,
+    e.name,
+    e.experience,
+    e.email,
+    p.name
+FROM
+    employee e
+JOIN
+    post p ON e.post_id = p.id
+WHERE
+    p.name = 'Driving Instructor';
+
+SELECT c.id, c.model, c.number, c.year, e.name AS employee_name
+FROM car c
+LEFT JOIN employee e ON c.id = e.car_id;
+
+SELECT grade, COUNT(*) AS student_count
+FROM journal
+GROUP BY grade
+ORDER BY grade;
+
+insert into car (model, number, year) values ('Toyota camri', 'ABC6666', 2020);
+
+select * from car c where c.year=2022;
+
